@@ -83,7 +83,8 @@ section{padding:88px 0}
 .card p{max-width:24ch;margin-top:8px}
 .card img{width:62%;margin:auto auto -34px;transition:transform .3s;filter:drop-shadow(0 14px 18px #0005)}
 .card:hover img{transform:translateY(-14px) rotate(3deg)}
-.card.m{--bg:var(--matcha)} .card.c{--bg:var(--cocoa)} .card.x{--bg:var(--pink);color:var(--espresso)}
+.card{background:linear-gradient(var(--bg),#0000 55%),var(--photo) center/cover;background-color:var(--bg);background-blend-mode:normal,var(--mode)}
+.card.m{--bg:var(--matcha);--photo:url(img/matcha_backdrop.webp);--mode:luminosity} .card.c{--bg:var(--cocoa);--photo:url(img/coffee_backdrop.webp);--mode:luminosity} .card.x{--bg:var(--pink);--photo:url(img/cocoa_backdrop.webp);--mode:soft-light;color:var(--espresso)}
 
 /* signatures list (Flora-style menu rows) */
 .sig{display:grid;grid-template-columns:1fr 1fr;gap:20px 56px;margin-top:64px}
