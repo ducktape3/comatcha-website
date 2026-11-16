@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COMA. | Coffee &amp; Matcha Bar, Kepala Batas, Penang</title>
+<meta name="description" content="COMA. is a late-night street cafe and matcha bar in Kepala Batas, Penang. Matcha, coffee and chocolate, open till 2AM. Closed on Wednesdays.">
+<meta property="og:title" content="COMA. | Coffee &amp; Matcha Bar">
+<meta property="og:description" content="Matcha, coffee and chocolate in Kepala Batas, Penang. Open till 2AM.">
+<meta property="og:image" content="img/drink_shot2.webp">
+<link rel="icon" href="img/coma-icon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --foam:#f4eedd;      /* milk-foam cream, page background */
+  --paper:#fbf8ee;
+  --matcha:#4f8a4c;    /* whisked matcha */
+  --forest:#1f3a2a;    /* deep matcha, dark sections */
+  --pink:#ec8fc4;      /* COMA. comma pink */
+  --espresso:#2a1c15;  /* text */
+  --latte:#c99b6b;
+  --cocoa:#6b3f2a;
+  --sq:22px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--foam);color:var(--espresso);font:400 17px/1.6 "DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.caps{font:500 13px/1.2 "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+.big{font:400 clamp(44px,8vw,96px)/.95 "Anton",Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em}
+.big i{font:italic 400 1.08em/.9 "Instrument Serif",Georgia,serif;text-transform:none;letter-spacing:-.01em;color:var(--matcha)}
+.checker{height:calc(var(--sq)*2);background:
+  conic-gradient(var(--c,var(--pink)) 25%,#0000 0 50%,var(--c,var(--pink)) 0 75%,#0000 0) 0 0/calc(var(--sq)*2) calc(var(--sq)*2)}
+.checker.green{--c:var(--matcha)}
+.btn{display:inline-block;padding:14px 26px;border:2px solid var(--espresso);border-radius:999px;text-decoration:none;background:var(--espresso);color:var(--foam);transition:transform .15s,background .15s,color .15s}
+.btn:hover{transform:translateY(-2px) rotate(-1.5deg);background:var(--pink);color:var(--espresso)}
+.btn.ghost{background:none;color:var(--espresso)}
+
+/* announcement bar */
+.bar{background:var(--forest);color:var(--foam);text-align:center;padding:9px 12px}
+
+/* nav */
+header{position:sticky;top:0;z-index:5;background:var(--foam);border-bottom:1px solid #2a1c1522}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:400 30px/1 "Anton",sans-serif;letter-spacing:.02em}
+.logo img{width:42px;height:42px;border-radius:50%}
+.logo small{font:italic 400 17px/1.1 "Instrument Serif",serif;letter-spacing:0;opacity:.75}
+nav ul{display:flex;gap:26px;list-style:none;padding:0}
+nav ul a{text-decoration:none;padding:8px 0;border-bottom:2px solid #0000}
+nav ul a:hover{border-color:var(--pink)}
+
+/* hero */
+.hero{padding-top:34px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(64px,11vw,150px)}
+.hero p{max-width:34ch;margin:22px 0 26px;font-size:19px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;aspect-ratio:4/5;max-height:74vh;object-fit:cover;border-radius:220px 220px 18px 18px}
+.sticker{position:absolute;left:-28px;bottom:36px;width:128px;height:128px;border-radius:50%;background:var(--pink);display:grid;place-items:center;text-align:center;transform:rotate(-12deg);font:400 22px/1 "Anton",sans-serif;text-transform:uppercase;box-shadow:4px 5px 0 var(--espresso)}
+.sticker span{display:block;font:italic 400 17px/1 "Instrument Serif",serif;text-transform:none}
+
+/* marquee */
+.marquee{margin-top:56px;background:var(--pink);overflow:hidden;white-space:nowrap;border-block:2px solid var(--espresso);padding:12px 0}
+.marquee div{display:inline-block;animation:slide 26s linear infinite;font:400 26px/1 "Anton",sans-serif;text-transform:uppercase;letter-spacing:.04em}
+.marquee i{font:italic 400 30px/1 "Instrument Serif",serif;text-transform:none;margin:0 22px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+section{padding:88px 0}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:end;margin-bottom:44px}
+.head p{max-width:44ch}
+
+/* pour cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{position:relative;border-radius:22px;padding:26px 24px 0;min-height:440px;overflow:hidden;display:flex;flex-direction:column;color:var(--foam);background:var(--bg)}
+.card h3{font:400 54px/1 "Anton",sans-serif;text-transform:uppercase}
+.card p{max-width:24ch;margin-top:8px}
+.card img{width:62%;margin:auto auto -34px;transition:transform .3s;filter:drop-shadow(0 14px 18px #0005)}
+.card:hover img{transform:translateY(-14px) rotate(3deg)}
+.card.m{--bg:var(--matcha)} .card.c{--bg:var(--cocoa)} .card.x{--bg:var(--pink);color:var(--espresso)}
+
+/* signatures list (Flora-style menu rows) */
+.sig{display:grid;grid-template-columns:1fr 1fr;gap:20px 56px;margin-top:64px}
+.sig h3{grid-column:1/-1;font:italic 400 40px/1 "Instrument Serif",serif}
+.row{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px dashed #2a1c1566}
+.row b{font:400 24px/1.1 "Anton",sans-serif;text-transform:uppercase;letter-spacing:.02em}
+.row em{flex:1;font:italic 400 19px/1.2 "Instrument Serif",serif;opacity:.8}
+.row span{white-space:nowrap}
+.lineup{display:flex;justify-content:center;align-items:flex-end;gap:2%;margin-top:60px}
+.lineup img{width:17%;max-width:170px;transition:transform .25s}
+.lineup img:hover{transform:translateY(-10px)}
+.center{text-align:center;margin-top:36px}
+
+/* space */
+.space{background:var(--forest);color:var(--foam)}
+.space .big i{color:var(--pink)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gallery img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px}
+.gallery img:nth-child(odd){transform:translateY(22px)}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+.visit-grid>img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px 18px 220px 220px}
+dl{margin:30px 0;display:grid;gap:22px}
+dt{color:var(--matcha);margin-bottom:4px}
+dd{font:400 26px/1.25 "Instrument Serif",serif}
+dd small{display:block;font:400 15px/1.5 "DM Sans",sans-serif;opacity:.75;margin-top:4px}
+
+footer{background:var(--espresso);color:var(--foam);padding:44px 0;text-align:center}
+footer .logo{justify-content:center;font-size:54px;margin-bottom:8px}
+footer a{margin:0 10px}
+footer p{margin-top:16px;opacity:.6;font-size:14px}
+
+/* floating round button (DE Cafe style) */
+.fab{position:fixed;right:18px;bottom:18px;z-index:6;width:92px;height:92px;border-radius:50%;background:var(--matcha);color:var(--foam);display:grid;place-items:center;text-align:center;text-decoration:none;font:400 17px/1.05 "Anton",sans-serif;text-transform:uppercase;border:2px solid var(--espresso);box-shadow:3px 4px 0 var(--espresso);transition:transform .2s}
+.fab:hover{transform:rotate(-10deg) scale(1.06)}
+
+@media (max-width:820px){
+  nav ul{gap:16px}
+  nav ul li.hide{display:none}
+  .logo small{display:none}
+  .hero-grid,.head,.visit-grid,.sig{grid-template-columns:1fr}
+  .sticker{left:8px;width:104px;height:104px;font-size:18px}
+  .row{flex-wrap:wrap;justify-content:space-between}
+  .row em{flex-basis:100%;order:3}
+  .cards{grid-template-columns:1fr}
+  .card{min-height:380px}
+  .card img{width:48%}
+  .gallery{grid-template-columns:1fr 1fr}
+  section{padding:60px 0}
+  .fab{width:76px;height:76px;font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .marquee div{animation:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="bar caps">Open 4PM to 2AM &nbsp;·&nbsp; Closed on Wednesdays</div>
+
+<header>
+  <nav class="wrap" aria-label="Main">
+    <a class="logo" href="#top"><img src="img/coma-icon.webp" alt="" width="42" height="42">COMA. <small>coffee &amp;<br>matcha</small></a>
+    <ul class="caps">
+      <li><a href="#pour">Menu</a></li>
+      <li><a href="#space">Space</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li class="hide"><a href="https://www.instagram.com/comatcha._/" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="hero wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="caps">Street cafe &amp; matcha bar · Kepala Batas, Penang</p>
+        <h1 class="big" style="margin-top:14px">Surr <i>in every</i> sip.</h1>
+        <p>Matcha, coffee and chocolate, poured fresh on the street side until 2AM. Come thirsty, stay late.</p>
+        <div class="hero-cta">
+          <a class="btn caps" href="#pour">See what we pour</a>
+          <a class="btn ghost caps" href="#visit">Find us</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="img/drink_shot2.webp" alt="A tray of four COMA. drinks held up in front of the pink and green COMA. banner" width="1100" height="1375">
+        <div class="sticker"><div>Make it<span>simple</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div>Matcha <i>&amp;</i> Coffee <i>&amp;</i> Chocolate <i>&amp;</i> Open till 2AM <i>&amp;</i> Matcha <i>&amp;</i> Coffee <i>&amp;</i> Chocolate <i>&amp;</i> Open till 2AM <i>&amp;</i> Matcha <i>&amp;</i> Coffee <i>&amp;</i> Chocolate <i>&amp;</i> Open till 2AM <i>&amp;</i> Matcha <i>&amp;</i> Coffee <i>&amp;</i> Chocolate <i>&amp;</i> Open till 2AM <i>&amp;</i></div>
+  </div>
+
+  <section id="pour">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="big">What <i>we</i> pour</h2>
+        <p>Three things, done properly. Pick your side, or come back tomorrow and try the other one.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card m">
+          <h3>Matcha</h3>
+          <p>Whisked to order. Start with the Shiru Matcha.</p>
+          <img src="img/ph_drinks-1.webp" alt="Iced matcha latte" loading="lazy" width="440" height="699">
+        </article>
+        <article class="card c">
+          <h3>Coffee</h3>
+          <p>Iced, creamy and strong enough for a 1AM chat.</p>
+          <img src="img/ph_drinks-6.webp" alt="Iced coffee with cream and caramel drizzle" loading="lazy" width="440" height="699">
+        </article>
+        <article class="card x">
+          <h3>Chocolate</h3>
+          <p>For the ones who came along “just to teman”.</p>
+          <img src="img/ph_drinks-8.webp" alt="Iced chocolate" loading="lazy" width="440" height="699">
+        </article>
+      </div>
+
+      <!-- [NEEDS CLIENT: full menu with prices; descriptions for Shiru Matcha; which photo is which drink] -->
+      <div class="sig">
+        <h3>House signatures</h3>
+        <div class="row"><b>Shiru Matcha</b><em>the matcha regulars ask for</em><span class="caps">Matcha</span></div>
+        <div class="row"><b>Midnight in Ipoh</b><em>earl grey sweetfoam blanc</em><span class="caps">Specialty</span></div>
+      </div>
+
+      <div class="lineup">
+        <img src="img/ph_drinks-2.webp" alt="" loading="lazy" width="440" height="699">
+        <img src="img/ph_drinks-3.webp" alt="" loading="lazy" width="440" height="699">
+        <img src="img/ph_drinks-4.webp" alt="" loading="lazy" width="440" height="699">
+        <img src="img/ph_drinks-5.webp" alt="" loading="lazy" width="440" height="699">
+        <img src="img/ph_drinks-7.webp" alt="" loading="lazy" width="440" height="699">
+      </div>
+      <p class="center"><a class="btn caps" href="https://www.instagram.com/comatcha._/" target="_blank" rel="noopener">Full menu &amp; specials on Instagram</a></p>
+    </div>
+  </section>
+
+  <div class="checker green" aria-hidden="true"></div>
+  <section id="space" class="space">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="big">Pull up <i>a chair</i></h2>
+        <p>Camp chairs under string lights, a game on the screen and a drink in hand. COMA. is the kind of street-side spot where one cup turns into the whole night.</p>
+      </div>
+      <div class="gallery">
+        <img src="img/place3.webp" alt="Outdoor seating under string lights at night" loading="lazy" width="1100" height="1467">
+        <img src="img/shot1.webp" alt="Barista finishing a matcha drink at the bar" loading="lazy" width="1100" height="1467">
+        <img src="img/place1.webp" alt="Friends watching football on the screen inside COMA." loading="lazy" width="1100" height="1467">
+        <img src="img/place4.webp" alt="Cosy corner with camp chairs and posters" loading="lazy" width="1100" height="1467">
+      </div>
+    </div>
+  </section>
+  <div class="checker" aria-hidden="true" style="background-color:var(--forest)"></div>
+
+  <section id="visit">
+    <div class="wrap visit-grid">
+      <img src="img/drink_shot.webp" alt="Two COMA. drinks, a strawberry matcha and a chocolate, on a marble counter" loading="lazy" width="1024" height="1536">
+      <div>
+        <h2 class="big">Come <i>find</i> us</h2>
+        <dl>
+          <div>
+            <dt class="caps">Where</dt>
+            <dd>910B, Jalan Lahar Ikan Mati, Kedai Jalan Kedah, Kepala Batas, Pulau Pinang</dd>
+          </div>
+          <div>
+            <dt class="caps">When</dt>
+            <dd>4PM to 2AM
+              <small>Closed on Wednesdays. Any changes are posted on our Instagram and Threads.</small></dd>
+          </div>
+        </dl>
+        <div class="hero-cta">
+          <a class="btn caps" href="https://maps.app.goo.gl/xqF5XXCPvReW1mCy9" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn ghost caps" href="https://www.instagram.com/comatcha._/" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn ghost caps" href="https://www.threads.com/@comatcha._" target="_blank" rel="noopener">Threads</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="checker" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <div class="logo">COMA.</div>
+    <p class="serif" style="font-size:24px;font-style:italic;opacity:1;margin:0 0 18px">Coffee &amp; matcha. Make it simple.</p>
+    <div class="caps">
+      <a href="https://www.instagram.com/comatcha._/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.threads.com/@comatcha._" target="_blank" rel="noopener">Threads</a>
+      <a href="https://maps.app.goo.gl/xqF5XXCPvReW1mCy9" target="_blank" rel="noopener">Google Maps</a>
+    </div>
+    <p>© 2026 COMA. Coffee, Kepala Batas, Pulau Pinang.</p>
+  </div>
+</footer>
+
+<a class="fab" href="https://maps.app.goo.gl/xqF5XXCPvReW1mCy9" target="_blank" rel="noopener">Find<br>us</a>
+
+</body>
+</html>
